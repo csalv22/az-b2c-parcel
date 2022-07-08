@@ -1,0 +1,16 @@
+{
+  "name": "az-b2c-parcel",
+  "version": "1.0.0",
+  "description": "Azure Active Directory B2C Template",
+  "license": "MIT",
+  "scripts": {
+    "start-b2c": "parcel ./src/*.html",
+    "build-b2c": "parcel build src/*.html --dist-dir ./public/  --public-url 'https://mystorageaccount.blob.core.windows.net/az-b2c'"
+  },
+  "dependencies": {
+    "parcel": "^2.6.2"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.6.2"
+  }
+}

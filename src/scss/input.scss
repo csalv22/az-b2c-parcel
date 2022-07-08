@@ -1,0 +1,88 @@
+#api {
+  // hide all input labels
+  label {
+    display: none;
+  }
+
+  input[type='text'],
+  input[type='password'],
+  select {
+    box-sizing: border-box;
+    height: 3.125rem;
+    padding: 12px;
+    font-size: 1.125rem;
+    border-radius: 5px;
+    color: $color-grey-900;
+    border: none;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    width: 100%;
+    border: 2px solid transparent;
+    &:hover {
+      outline-color: $color-ochre-300;
+    }
+    &:focus {
+      outline-color: $color-ochre-500;
+    }
+    &::placeholder {
+      color: $color-grey-500;
+    }
+  }
+
+  .has-error {
+    input[type='text'],
+    input[type='password'],
+    select {
+      border-color: $color-red-500;
+    }
+  }
+
+  input:disabled {
+    display: none;
+  }
+
+  select {
+    position: relative;
+    appearance: none;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuNDAyMzcgMTJMNiAxMy40MzIzTDIwLjAyMjcgMjhMMzQgMTMuNDQwNEwzMi41OTU3IDEyLjAxMDJMMjAuMDIwNyAyNS4xMDlMNy40MDIzNyAxMloiIGZpbGw9ImN1cnJlbnRDb2xvciIvPgo8L3N2Zz4K');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 11px) 11px;
+    background-repeat: no-repeat;
+    background-size: 28px;
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuNDAyMzcgMTJMNiAxMy40MzIzTDIwLjAyMjcgMjhMMzQgMTMuNDQwNEwzMi41OTU3IDEyLjAxMDJMMjAuMDIwNyAyNS4xMDlMNy40MDIzNyAxMloiIGZpbGw9IiNhNjE3MTEiLz4KPC9zdmc+Cg==');
+    }
+    @include default-transition;
+  }
+
+  .error {
+    display: none;
+
+    &.pageLevel,
+    &.itemLevel {
+      position: relative;
+      color: $color-oxidRed-700;
+      margin-top: 4px;
+      opacity: 1;
+      background-color: rgba($color-grey-200, 0.8);
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 0.875rem;
+      &.show {
+        display: inline-block;
+      }
+    }
+    &.pageLevel,
+    &.itemLevel {
+      margin-bottom: 12px;
+    }
+    &.itemLevel,
+    &.pageLevel {
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
