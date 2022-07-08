@@ -1,0 +1,17 @@
+// Align all browsers to similar default
+@import './scss/normalize';
+
+// import reusable scss values
+@import './scss/colors';
+@import './scss/transition';
+@import './scss/breakpoints';
+@import './scss/link';
+
+// apply styles
+@import './scss/b2c-cleanup';
+@import './scss/fonts';
+@import './scss/form';
+@import './scss/button';
+@import './scss/layout';
+@import './scss/typography';
+@import './scss/input';

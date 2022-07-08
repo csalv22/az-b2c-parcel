@@ -1,0 +1,41 @@
+button:not(#cancel) {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  height: 3.125rem;
+  border-radius: 5px;
+  background-color: $color-oxidRed-500;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  width: fit-content;
+  min-width: 200px;
+
+  color: $color-white;
+
+  &:hover {
+    background-color: $color-oxidRed-600;
+  }
+  &:active,
+  &:focus {
+    background-color: $color-oxidRed-700;
+  }
+
+  @include default-transition;
+}
+
+button {
+  cursor: pointer;
+  &#cancel {
+    background: none;
+    border: none;
+    @include link-style;
+    text-align: left;
+  }
+}
+
+#attributeVerification .buttons #continue[aria-disabled='true'] {
+  display: none;
+}

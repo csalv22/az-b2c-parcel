@@ -1,0 +1,54 @@
+<div id="api" data-name="Phonefactor" role="form">
+  <span
+    id="screen_reader_msg"
+    role="alert"
+    aria-label="Die Schaltfl&amp;#228;che ist aktiviert, Sie k&amp;#246;nnen jetzt fortfahren."
+    aria-hidden="false"
+    style="display: none"
+  ></span>
+  <div class="buttons"></div>
+  <div class="intro">
+    <p>Fordern Sie für die Identifizierung einen Code an. Sie erhalten den Code per SMS auf ihre Mobiltelefonnummer:</p>
+  </div>
+  <div class="error pageLevel" id="errorMessage" style="display: none" aria-hidden="true">
+    <p role="alert">Der eingegebene Verfizierungscode ist nicht korrekt.</p>
+  </div>
+
+  <div class="phoneNumbers" id="phoneNumbers">
+    <div class="phoneNumber">
+      <div class="type">Phone Number</div>
+      <div class="number">XXXXXXXX000</div>
+    </div>
+  </div>
+
+  <div id="codeVerification" style="display: block" aria-hidden="false" class="has-error">
+    <div class="actionLabel" aria-hidden="false" style="display: block">
+      <label for="verificationCode">Bitte geben Sie den Verifzierungscode ein oder </label>
+      <a id="retryCode" tabindex="1">fordern Sie einen neuen Code an. </a>
+    </div>
+    <div class="error itemLevel" aria-hidden="false" style="display: block">
+      <p role="alert">Der eingegebene Verfizierungscode ist nicht korrekt.</p>
+    </div>
+    <input
+      type="text"
+      role="textbox"
+      id="verificationCode"
+      maxlength="6"
+      autocomplete="false"
+      pattern="\d{6}"
+      title="Geben Sie den Verifizierungscode ein, den Sie erhalten haben."
+      aria-required="true"
+      aria-hidden="false"
+      style="display: block"
+      class="highlightError"
+    />
+  </div>
+
+  <div class="working" style="display: none"></div>
+
+  <div class="buttons">
+    <button id="sendCode" autofocus="" class="disabled" aria-disabled="true" style="display: none">Code per SMS anfordern</button
+    ><button id="verifyCode" class="" aria-disabled="false" style="display: inline-block">Code überprüfen</button>
+    <button id="cancel">Abbrechen</button>
+  </div>
+</div>
