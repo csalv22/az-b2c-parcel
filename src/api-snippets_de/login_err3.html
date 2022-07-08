@@ -1,0 +1,92 @@
+<div id="api" data-name="Unified">
+  <div class="claims-provider-list-buttons social" aria-label="Mit Konto für soziales Netzwerk anmelden" role="form">
+    <div class="intro">
+      <h2 aria-level="1">Mit Konto für soziales Netzwerk anmelden</h2>
+    </div>
+    <div class="options">
+      <div>
+        <button class="accountButton firstButton claims-provider-selection" id="SignUpExchange" role="link" autofocus="">Set the sign-up flow</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider">
+    <h2>ODER</h2>
+  </div>
+  <form
+    id="localAccountForm"
+    action="JavaScript:void(0);"
+    class="localAccount has-error"
+    aria-label="Mit E-Mail Adresse anmelden.
+              "
+  >
+    <div class="intro">
+      <h2 aria-level="1">Mit E-Mail Adresse anmelden.</h2>
+    </div>
+    <div class="error pageLevel" aria-hidden="false" role="alert" style="display: block">
+      <p>Das eingegebene Password ist nicht korrekt.</p>
+    </div>
+    <div class="entry">
+      <div class="entry-item has-value">
+        <label for="signInName"> E-Mail </label>
+        <div class="error itemLevel" aria-hidden="true" role="alert" style="display: none">
+          <p></p>
+        </div>
+        <input
+          type="text"
+          id="signInName"
+          name="E-Mail
+              "
+          title='Geben Sie einen gültigen Wert für "E-Mail
+              " ein.'
+          autofocus=""
+          placeholder="E-Mail
+              "
+          aria-label="E-Mail
+              "
+        />
+      </div>
+      <div class="entry-item has-value">
+        <div class="password-label">
+          <label for="password">Password</label>
+          <a
+            id="forgotPassword"
+            href="#"
+            >Kennwort vergessen?</a
+          >
+        </div>
+        <div class="error itemLevel" aria-hidden="true" style="display: none">
+          <p role="alert">Geben Sie Ihr Kennwort ein.</p>
+        </div>
+        <input
+          type="password"
+          id="password"
+          name="Password"
+          placeholder="Password"
+          aria-label="Password"
+          autocomplete="current-password"
+          aria-required="true"
+          class=""
+        />
+      </div>
+      <div class="working" style="display: none"></div>
+
+      <div class="buttons">
+        <button id="next" type="submit" form="localAccountForm">Anmelden</button>
+      </div>
+    </div>
+    <div class="divider">
+      <h2>ODER</h2>
+    </div>
+    <div class="create">
+      <p>
+        Sie haben noch kein Konto?
+        <a
+          id="createAccount"
+          href="#"
+          >Jetzt registrieren.
+        </a>
+      </p>
+    </div>
+  </form>
+</div>
